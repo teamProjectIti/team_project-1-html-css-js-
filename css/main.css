@@ -1,0 +1,278 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* <!-- start div search and menu  --> */
+
+.searcHeader{
+    display: flex;
+    border-radius: 999px;
+    box-shadow: 1px 1px 0px 1px slategrey;
+    border: 1px solid silver;
+    /* padding: 7px; */
+    overflow: hidden;;
+}
+.searcHeader .search .searchInput{
+    width: 92.7%;
+    padding: 10px;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:20;
+    font-weight: bolder;
+    height: 71%;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+}
+.list
+{
+    border-left: 1px solid black;
+
+}
+.list ul{
+list-style: none;
+}
+.list ul li{
+    display: inline-block;
+    margin-left: 10px;
+    transition: all 0.2s linear;
+border-radius: 8px;
+padding: 8px;
+cursor: pointer;
+}
+.list ul li:hover{
+background-color: rgb(122, 121, 121);
+color: white;
+}
+.list ul .active{
+    background-color: black;
+    color: white;
+}
+.list ul .active:hover{
+    background-color: black;
+    color: white;
+
+}
+/* <!-- end div search and menu  --> */ 
+
+section{
+    padding: 5px;
+}
+/* start section dropdownlist   */
+
+
+nav{
+  position: absolute;
+
+  z-index: 3;
+}
+nav .drop-btn{
+  width: 120px;
+  background: #007BFF  ;
+  border-radius: 5px;
+  line-height: 55px;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  padding: 0 20px;
+}
+nav .drop-btn span{
+  float: right;
+  line-height: 50px;
+  font-size: 28px;
+  cursor: pointer;
+}
+nav .tooltip{
+  position: absolute;
+  right: 20px;
+  bottom: -20px;
+  height: 15px;
+  width: 15px;
+  background: #007BFF  ;
+  transform: rotate(45deg);
+  display: none;
+}
+nav .tooltip.show{
+  display: block;
+}
+nav .wrapper{
+  position: absolute;
+  top: 65px;
+  display: flex;
+  width: 370px;
+  overflow: hidden;
+  border-radius: 5px;
+  display: none;
+  border: 1px solid black;
+  transition: all 0.3s ease;
+}
+nav .wrapper.show{
+  display: block;
+  display: flex;
+}
+.wrapper ul{
+  width: 400px;
+  list-style: none;
+  padding: 10px;
+  transition: all 0.3s ease;
+  z-index: 3;
+background-color: white;
+}
+.wrapper ul li{
+  line-height: 55px;
+  z-index: 3;
+
+}
+.wrapper ul li a{
+  position: relative;
+  color: blue;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0 10px;
+  display: flex;
+  border-radius: 8px;
+  align-items: center;
+  text-decoration: none;
+}
+.wrapper ul li:hover a{
+  background: #0069D9;
+  color: white;
+
+}
+ul li a .icon{
+  height: 40px;
+  width: 40px;
+  margin-right: 13px;
+  background: #007BFF  ;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+}
+ul li a .icon span{
+  line-height: 40px;
+  font-size: 20px;
+  color: white;
+}
+ul li a i{
+  position: absolute;
+  right: 10px;
+  font-size: 25px;
+  pointer-events: none;
+}
+.wrapper ul.setting-drop,
+.wrapper ul.help-drop{
+  display: none;
+}
+.wrapper .arrow{
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  color: blue;
+  cursor: pointer;
+}
+.wrapper .arrow span{
+  margin-right: 15px;
+}
+
+/* end section dropdownlist   */
+/* strat dropdwon list two  */
+
+.dropbtn {
+    background-color: #007BFF    ;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+border-radius: 10px;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #007BFF    ;
+  }
+  .dropdown {
+    float: right;
+    position: relative;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    overflow: auto;
+    margin-top: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 0;
+    z-index: 1;
+    border-radius: 10px;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown a:hover {background-color: #0069D9 ;color: white;}
+  
+  .show {display: block;}
+  /* end dropdwonlist two  */
+  /* start div person */
+  .container {
+    position: relative;
+    width: 300px;
+   height: 200px;
+   border-radius: 10px;
+margin: 10px;
+border: 1px solid silver;
+  }
+  .image {
+    display: block;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 10px;
+    width: 300px;
+   height: 200px;
+    opacity: 0;
+    transition: .2s ease;
+    background-color:rgba(0,0,0,0.4);
+  }
+  
+  .container:hover .overlay {
+    opacity: 1;
+  }
+  .btn_overlay{
+      border: none;
+      padding: 10px;
+      background-color:rgba(0,0,0,0.8);
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+  }
+  .btn_overlay:hover{
+    background-color:rgba(0,0,0,0.8);
+      color: white;
+      border-radius: 10px;
+
+  }
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  /* end div person */
