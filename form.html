@@ -241,15 +241,22 @@ form .btn input[type="submit"]{
           <form action="#" class="signup" name="signupForm" method="post" onsubmit="return signupValid()">
             <div class="field">
               <input type="text" name="firstname" placeholder="Firstname" autocomplete="off" required>
+              <small style="color: red;" id="errorName"></small>
             </div>
             <div class="field">
               <input class="lstname" name="lastname" type="text" placeholder="Lastname" autocomplete="off" required>	
+              <small style="color: red;" id="errorLastname"></small>
+
             </div>
             <div class="field">
               <input type="text" placeholder="Email Address" required name="email">
+              <small style="color: red;" id="erroremail"></small>
+
             </div>
             <div class="field">
               <input type="password" placeholder="Password" required name="password">
+              <small style="color: red;" id="errorPassword"></small>
+
             </div>
             <div class="field btn">
               <div class="btn-layer"></div>
@@ -259,6 +266,6 @@ form .btn input[type="submit"]{
         </div>
       </div>
     </div>
-    <script src="form.js"></script>
+ <script src="form.js"></script>
   </body>
 </html>

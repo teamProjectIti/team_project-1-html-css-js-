@@ -8,9 +8,6 @@
     messagingSenderId: "779001370196",
     appId: "1:779001370196:web:c4a8d67faf8d85cf96ffc1"
   };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-var auth=firebase.auth();
 var loginText = document.querySelector(".title-text .login");
 var loginForm = document.querySelector("form.login");
 var loginBtn = document.querySelector("label.login");
@@ -30,21 +27,29 @@ function signupValid(){
 	if (firstname.value.length <= 2) {
 		signup_error.style.display = "block";
 		firstname.style.border = "1px solid red";
-		signup_error.innerText = "Please Fill up Your Firstname";
+		document.getElementById('errorName').innerText = "Please Fill up Your Firstname";
+		document.getElementById('errorPassword').innerText = "Please Fill up Your required";
+		document.getElementById('errorLastname').innerText = "Please Fill up Your required";
+		lastname.value="";
+		password.value="";
+
 		firstname.focus();
 		return false;
 	}
+
 	if (lastname.value.length <= 2) {
 		signup_error.style.display = "block";
 		lastname.style.border = "1px solid red";
-		signup_error.innerText = "Please Fill up Your Lastname";
+		document.getElementById('errorLastname').innerText = "Please Fill up Your Lastname";
+
 		lastname.focus();
 		return false;
 	}
 	if (password.value.length <= 3) {
 		signup_error.style.display = "block";
 		password.style.border = "1px solid red";
-		signup_error.innerText = "Please Fill up Your Password";
+		document.getElementById('errorPassword').innerText = "Please Fill up Your Password";
+
 		password.focus();
 		return false;
 	}
@@ -97,9 +102,6 @@ function passwordVerify(){
 	}
 }
 signupBtn.onclick = (()=>{
-	const promise=auth.createUserWithEmailandPassword (email.value, password.value)
-	promise.catch(e =>alert(e.massage));
-	alert("signup");
 	loginForm.style.marginLeft = "-50%";
 	loginText.style.marginLeft = "-50%";
   });
